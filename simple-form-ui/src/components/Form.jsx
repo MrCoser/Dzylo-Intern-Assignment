@@ -37,9 +37,8 @@ const Form = () => {
 
   const isValidPhoneNumber = (phoneNumber) => {
     // Regular expression for basic phone number validation (10 digits)
-    const pn = phoneNumber.slice(4);
     const phoneRegex = /^\d{10}$/;
-    return phoneRegex.test(pn);
+    return phoneRegex.test(phoneNumber);
   };
 
   /* const isValidPassword = (password) => {
