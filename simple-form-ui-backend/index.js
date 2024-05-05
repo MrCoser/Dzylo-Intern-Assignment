@@ -54,8 +54,8 @@ app.get("/api/getData", (req, res) => {
 });
 
 // 2 API's 
-// 1 - GET endpoint - get IDs in req query and return the details matching with that ID
-// 2 - GET endpoint - get ID in req parameter
+// 1) GET endpoint - get IDs in req query and return the details matching with that ID
+// 2) GET endpoint - get ID in req parameter
 
 // 1)
 // app.get("/getdetails/:email", (req, res) => {
