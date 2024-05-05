@@ -53,6 +53,51 @@ app.get("/api/getData", (req, res) => {
   });
 });
 
+// 2 API's 
+// 1 - GET endpoint - get IDs in req query and return the details matching with that ID
+// 2 - GET endpoint - get ID in req parameter
+
+// 1)
+// app.get("/getdetails/:email", (req, res) => {
+//   const email = req.params.email;
+//   db.query("SELECT * FROM details WHERE Email = ?", [email], (err, results) => {
+//     if (err) {
+//       console.error("Error fetching data: ", err);
+//       res.status(500).json({ error: "Error occurred while fetching data" });
+//     } 
+//     
+//     if(results.length === 0) {
+//        res.status(400).json({ error: "Details not found" });
+//     }
+//
+//     res.status(200).json(results[0]);
+//   })
+// })
+
+// 2)
+// app.get("/getdetails", (req, res) => {
+//   const email = req.query.email;
+//   if(!email) {
+//      res.status(400).json({ error: "Parameter required" });
+//      return;
+//   }
+//   
+//   db.query("SELECT * FROM details WHERE Email = ?", [email], (req, res) => {
+//      if(err) {
+//          console.error("Error fetching data: ", err);
+//          res.status(500).json({ error: "Error occurred while fetching data" });
+//      }
+//      
+//      if(results.length === 0) {
+//          res.status(400).json({ error: "Details not found" });  
+//          return;
+//      }
+//
+//      res.status(200).json(results[0]);
+//   })    
+// })
+
+
 app.post("/api/submitData", validateDetails, (req, res) => {
   // extract data from request body
   const { firstName, lastName, email, phoneNumber, address } = req.body;
