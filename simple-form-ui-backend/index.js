@@ -57,7 +57,7 @@ app.get("/api/getData", (req, res) => {
 // 1) GET endpoint - get IDs in req query and return the details matching with that ID
 // 2) GET endpoint - get ID in req parameter
 
-// 1)
+// 2)
 // app.get("/getdetails/:email", (req, res) => {
 //   const email = req.params.email;
 //   db.query("SELECT * FROM details WHERE Email = ?", [email], (err, results) => {
@@ -74,7 +74,7 @@ app.get("/api/getData", (req, res) => {
 //   })
 // })
 
-// 2)
+// 1)
 // app.get("/getdetails", (req, res) => {
 //   const email = req.query.email;
 //   if(!email) {
